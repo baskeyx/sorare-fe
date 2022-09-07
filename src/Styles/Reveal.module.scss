@@ -1,0 +1,46 @@
+.RevealSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.FlipCard {
+  perspective: 1000px;
+}
+
+.FlipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.FlipCard.open .FlipCardInner {
+  transform: rotateY(180deg);
+}
+
+.FlipCardFront, .FlipCardBack {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.FlipCardFront {
+  position: absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+  border-radius: 30px;
+  img {
+    position: absolute;
+  }
+}
+
+.FlipCardBack {
+  transform: rotateY(180deg);
+}

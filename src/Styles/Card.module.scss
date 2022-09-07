@@ -1,0 +1,171 @@
+.Card {
+  font-family: Lato;
+  color: #fff;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 63 / 88;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Card.margin {
+  margin: 10px;
+}
+
+.CardLayout {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.Seperate {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CardPanel {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+  div {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.CardBottom {
+  width: 100%;
+  h3 {
+    font-size: 16px;
+    margin: 6px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color:#ffffff96;
+  }
+}
+
+.common, .limited {
+  .CardBottom{
+    h3 {
+      color: #00000096;
+    }
+  }
+}
+
+.PlayerImage {
+  width: 100%;
+  padding-top: 20px;
+}
+  
+.ClubBadge {
+  width: 40px;
+}
+
+.PlayerName {
+  font-size: 36px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.NationalFlag {
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.common {
+  background: #c9d7dd;
+  color: #000;
+}
+
+.limited {
+  color: #000;
+  background: var(--limited-color);
+}
+
+.rare {
+  background: var(--rare-color);
+}
+
+.super_rare {
+  background: var(--super-rare-color);
+}
+
+.unique {
+  background: var(--unique-color);
+}
+
+.PlayerName.common {
+  background-color: transparent;
+  background-image: linear-gradient(transparent 0%, var(--common-color) 30%);
+}
+
+.PlayerName.limited {
+  background-color: transparent;
+  background-image: linear-gradient(transparent 0%, var(--limited-color) 30%);
+}
+
+.PlayerName.super_rare {
+  background-color: transparent;
+  background-image: linear-gradient(transparent 0%, var(--super-rare-color) 30%);
+}
+
+.PlayerName.rare {
+  background-color: transparent;
+  background-image: linear-gradient(transparent 0%, var(--rare-color) 30%);
+}
+
+.PlayerName.unique {
+  background-color: transparent;
+  background-image: linear-gradient(transparent 0%, var(--unique-color) 30%);
+}
+
+.CardPanel, 
+.PlayerImage,
+.PlayerName {
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+
+.open .CardPanel, 
+.open .PlayerImage,
+.open .PlayerName {
+  opacity: 1;
+}
+
+.CardBottom .CardPanel:nth-child(1) {
+  transition-delay: 1s;
+}
+.CardBottom .CardPanel:nth-child(2) {
+  transition-delay: 1.4s;
+}
+.CardBottom .CardPanel:nth-child(3) {
+  transition-delay: 1.8s;
+}
+.CardBottom .CardPanel:nth-child(3) {
+  transition-delay: 1.8s;
+}
+
+.PlayerImage {
+  transition-delay: 3.4s;
+}
+
+.PlayerName {
+  transition-delay: 3s;
+}
+
+.Seperate:first-of-type .CardPanel {
+  transition-delay: 2.6s;
+}

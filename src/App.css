@@ -1,0 +1,18 @@
+@import-normalize;
+
+:root {
+  --common-color:#c9d7dd;
+  --limited-color: #fdf161;
+  --rare-color: #ad1010;
+  --super-rare-color: #1e2791;
+  --unique-color: #302e30;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500;600&display=swap');
+
+.Flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
